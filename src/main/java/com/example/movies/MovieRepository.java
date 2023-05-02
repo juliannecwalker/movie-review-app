@@ -10,5 +10,6 @@ import org.springframework.stereotype.Repository;
 // Have to let it know what type of Object and what type of Id we are dealing with
 @Repository
 public interface MovieRepository extends MongoRepository<Movie, ObjectId>{
-    Optional<Movie> findMovieByImdb(String imdb);
+    // Can form dynamic queries like this using any property name in model class as long as they are unique
+    Optional<Movie> findMovieByImdbId(String imdbId);
 }

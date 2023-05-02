@@ -20,7 +20,7 @@ public class MovieService {
     }
 
     // Optional required in case the id passed in doesn't exist
-    public Optional<Movie> singleMovie(ObjectId id){
-        return repository.findById(id);
+    public Optional<Movie> findMovieByImdbId(String imdbId){
+        return repository.findMovieByImdbId(imdbId);
     }
 }

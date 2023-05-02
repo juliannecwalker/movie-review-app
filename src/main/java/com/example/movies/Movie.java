@@ -25,7 +25,7 @@ public class Movie {
     private ObjectId id;
 
     // All the fields of the object (from the JSON)
-    private String imdb;
+    private String imdbId;
 
     private String title;
 
@@ -42,5 +42,15 @@ public class Movie {
     // This will make the reviews a collection in the database
     @DocumentReference
     private List<Review> reviewIds;
+
+    public Movie(String imdbId, String title, String releaseDate, String trailerLink, String poster, List<String> backdrops, List<String> genres) {
+        this.imdbId = imdbId;
+        this.title = title;
+        this.releaseDate = releaseDate;
+        this.trailerLink = trailerLink;
+        this.poster = poster;
+        this.backdrops = backdrops;
+        this.genres = genres;
+    }
 
 }
