@@ -17,4 +17,10 @@ public class Review {
     private ObjectId id;
 
     private String body;
+
+    // ObjectId is auto-generated
+    public Review(String body) {
+        this.body = body;
+    }
+
 }
